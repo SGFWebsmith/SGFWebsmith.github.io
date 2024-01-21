@@ -140,6 +140,10 @@
     display: block;
   }
 
+  .nav__brand-link {
+    font-size: 1rem;
+  }
+
   .nav__list {
     display: block;
     width: 0;
