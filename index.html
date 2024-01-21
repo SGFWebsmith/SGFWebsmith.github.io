@@ -18,21 +18,41 @@
             />SGF Websmith</a
           >
         </div>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="#home">Home</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#about">About</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#projects">Projects</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="#contact">Contact</a>
-          </li>
-        </ul>
+
+        <div class="nav__nav">
+          <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#projects">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navList = document.querySelector(".nav__list");
+
+        hamburger.addEventListener("click", function () {
+          navList.classList.toggle("is-active");
+        });
+      });
+    </script>
   </body>
 </html>
