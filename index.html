@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SGF Websmith 👨‍💻</title>
 
-    <link rel="stylesheet"
-          href="css/styles.css">
-</head>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__brand">
+          <a class="nav__brand-link" href="#home">
+            <img
+              src="/assets/images/SGF-Websmith__Logo.svg"
+              alt="Sgf Websmith Logo"
+            />SGF Websmith</a
+          >
+        </div>
 
-<body>
-    <header>
-        <h1>Welcome to SGF Websmith</h1>
-        <p>Your partner in web development excellence</p>
+        <div class="nav__nav">
+          <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#projects">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>About Us</h2>
-            <p>We specialize in creating outstanding websites for businesses of all sizes.</p>
-        </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const navList = document.querySelector(".nav__list");
 
-        <section>
-            <h2>Services</h2>
-            <p>From web design to full-stack development, we cover all your web development needs.</p>
-        </section>
-
-        <section>
-            <h2>Contact</h2>
-            <p>Email us at <a href="mailto:sgfwebsmith@gmail.com">SGFWebsmith@gmail.com</a></p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 SGF Websmith</p>
-    </footer>
-</body>
-
+        hamburger.addEventListener("click", function () {
+          navList.classList.toggle("is-active");
+        });
+      });
+    </script>
+  </body>
 </html>
